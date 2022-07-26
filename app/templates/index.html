@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio's Favorite Athletes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My favorite Athletes<h1>
+        {%for x in people %}
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-5 card" style="width: 15rem;">
+                    <img src="{{ x['img'] }}" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ x['person']}}</h3>
+                        <p class="card-text">{{ x['sport']}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+</html>
